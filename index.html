@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DotaWiki — Dota 2 Енциклопедія</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body { background: #f9f9f9; }
+        .box { background-color: #fff; border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; }
+        .slider-img { width: 100%; height: auto; }
+        header, footer { background: #e3e3e3; padding: 10px 0; }
+        nav a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #333; }
+        h1 { font-size: 1.8rem; }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <h1>DotaWiki</h1>
+    </div>
+</header>
+
+<!-- GRID LAYOUT -->
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- LEFT -->
+        <aside class="col-12 col-md-3 box">
+            <h4>Галерея героїв</h4>
+            <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/invoker-.jpg" class="slider-img" alt="Invoker">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/pudge.jpg" class="slider-img" alt="Pudge">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/crystal-maiden-.jpg" class="slider-img" alt="CM">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/phantom-assassin-.jpg" class="slider-img" alt="PA">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="col-12 col-md-6 box">
+            <h2>Що таке Dota 2?</h2>
+            <div class="accordion" id="loreAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                            Основи гри
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <p>Dota 2 — це командна стратегія в режимі реального часу, де дві команди по 5 гравців змагаються за контроль над картою, знищуючи ворожу базу — "Ancient".</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                            Герої
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>У грі понад 120 унікальних героїв, кожен із власними здібностями. Герої поділяються на ролі: керрі, сапорт, офлейнери тощо.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- RIGHT -->
+        <section class="col-12 col-md-3 box">
+            <h4>Зворотній зв'язок</h4>
+            <form>
+                <div class="mb-2">
+                    <label for="name" class="form-label">Ім’я</label>
+                    <input type="text" id="name" class="form-control">
+                </div>
+                <div class="mb-2">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+                <div class="mb-2">
+                    <label for="favorite-hero" class="form-label">Улюблений герой</label>
+                    <input type="text" id="favorite-hero" class="form-control">
+                </div>
+                <div class="mb-2">
+                    <label for="message" class="form-label">Повідомлення</label>
+                    <textarea id="message" class="form-control" rows="2"></textarea>
+                </div>
+                <div class="mb-2">
+                    <label for="experience" class="form-label">Стаж у грі</label>
+                    <select id="experience" class="form-select">
+                        <option>Новачок</option>
+                        <option>Середній</option>
+                        <option>Ветеран</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary">Надіслати</button>
+            </form>
+        </section>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container text-center">
+        <p>© 2025 DotaWiki. Незалежна фан-енциклопедія.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
